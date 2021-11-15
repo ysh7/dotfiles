@@ -61,28 +61,34 @@ bindkey -M vicmd 'j' history-substring-search-down
 # }}}
 
 # Spaceship prompt {{{
-zinit light spaceship-prompt/spaceship-prompt
-SPACESHIP_PROMPT_ORDER=(
-  dir
-  host
-  jobs
-  line_sep
-  char
-)
-#SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_RPROMPT_ORDER=(
-  venv
-  git
-  exit_code
-)
-SPACESHIP_CHAR_SYMBOL='❯'
-SPACESHIP_CHAR_SUFFIX=' '
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_EXIT_CODE_SYMBOL='✘ '
-SPACESHIP_GIT_STATUS_PREFIX=' '
-SPACESHIP_GIT_STATUS_SUFFIX=''
-SPACESHIP_GIT_STATUS_COLOR='magenta'
- # }}}
+#zinit light spaceship-prompt/spaceship-prompt
+#SPACESHIP_PROMPT_ORDER=(
+#  dir
+#  host
+#  jobs
+#  line_sep
+#  char
+#)
+##SPACESHIP_PROMPT_SEPARATE_LINE=true
+#SPACESHIP_RPROMPT_ORDER=(
+#  venv
+#  git
+#  exit_code
+#)
+#SPACESHIP_CHAR_SYMBOL='❯'
+#SPACESHIP_CHAR_SUFFIX=' '
+#SPACESHIP_EXIT_CODE_SHOW=true
+#SPACESHIP_EXIT_CODE_SYMBOL='✘ '
+#SPACESHIP_GIT_STATUS_PREFIX=' '
+#SPACESHIP_GIT_STATUS_SUFFIX=''
+#SPACESHIP_GIT_STATUS_COLOR='magenta'
+# }}}
+
+# Pure prompt {{{
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
+zstyle :prompt:pure:git:stash show yes
+# }}}
 
 # Import Aliases/Functions {{{
 for file in ${HOME}/.config/zsh/scripts/*.zsh; do

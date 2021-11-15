@@ -7,6 +7,7 @@ alias curlex='curl -w "@/Users/yagneshmistry/.bin/curlex-template.txt"'
 alias reload='source ~/.zshrc'
 alias serve='python -m SimpleHTTPServer 8000'
 alias cleardnscache='sudo killall -HUP mDNSResponder'
+alias tofix='vim ~/Documents/notes/fixes.md'
 
 if command -v fkst-cli &> /dev/null
 then
