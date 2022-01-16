@@ -1,0 +1,25 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	unstage = reset HEAD --
+	s = status -s
+	cl = clone
+	ll = log --pretty=format:\"%h %<(15)%ar: %s %C(yellow)[%an]\"
+	pl = pull
+	plr = pull --rebase --autostash
+	df = diff
+	dfc = diff --cached
+	dfw = diff --word-diff --ignore-blank-lines --ignore-all-space
+	dfs = diff --summary
+
+[include]
+	path = ~/.config/git/config.local
+
+[core]
+	excludesfile = ~/.config/git/gitignore
+	editor = vim
+
+[color]
+	ui = auto
