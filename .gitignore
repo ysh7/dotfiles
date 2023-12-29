@@ -3,3 +3,5 @@
 .zsh_history
 .zcompdump
 
+# ignore files generated for ssh controlmaster
+.ssh/control/*
